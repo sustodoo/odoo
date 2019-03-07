@@ -1,0 +1,90 @@
+<odoo>
+    <data>
+        <record id="payslip_payslip_view" model="ir.actions.act_window">
+            <field name="name">Payslip</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">payslip.payslip</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                </p>
+                <p>
+                </p>
+            </field>
+        </record>
+
+        <record id="payslip_allowance_view" model="ir.actions.act_window">
+            <field name="name">allowance</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">payslip.allowance</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                </p>
+                <p>
+                </p>
+            </field>
+        </record>
+
+        <record id="payslip_stepsallowance_view" model="ir.actions.act_window">
+            <field name="name">stepsallowance</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">payslip.stepsallowance</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                </p>
+                <p>
+                </p>
+            </field>
+        </record>
+
+        <record id="payslip_employee_view" model="ir.actions.act_window">
+            <field name="name">employee</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">collage.employee</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                </p>
+                <p>
+                </p>
+            </field>
+        </record>
+
+
+        <record id="payslip_steps_view" model="ir.actions.act_window">
+            <field name="name">Steps</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">payslip.payslip.step</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                </p>
+                <p>
+                </p>
+            </field>
+        </record>
+
+
+
+
+
+        
+
+
+        <!-- This Menu Item will appear in the Upper bar, That's why It needs NO parent or action -->
+        <menuitem id="payslip_main_menu" name="Payslip"/>
+
+        <!-- This Menu Item Must have a parent -->
+        <menuitem id="payslip_menu_cat" name="Payslip" parent="payslip_main_menu"/>
+
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="payslip_menu" name="Payslip" parent="payslip_menu_cat" action="payslip_payslip_view"/>
+        <menuitem id="allowance_menu" name="Allowance" parent="payslip_menu_cat" action="payslip_allowance_view"/>
+        <menuitem id="stepsallowance_menu" name="Steps Allowance" parent="payslip_menu_cat" action="payslip_stepsallowance_view"/>
+        <menuitem id="employee_menu" name="employee" parent="payslip_menu_cat" action="payslip_employee_view"/>
+        <menuitem id="steps_menu" name="Steps" parent="payslip_menu_cat" action="payslip_steps_view"/>
+
+    </data>
+</odoo>
