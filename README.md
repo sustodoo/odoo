@@ -5,7 +5,7 @@ from odoo import fields,api
 
 ```
 
-full [doc](https://github.com/sustodoo/technicaltraining) 
+for full documentation go [here](https://github.com/sustodoo/technicaltraining) 
 
 
 @yaseen
